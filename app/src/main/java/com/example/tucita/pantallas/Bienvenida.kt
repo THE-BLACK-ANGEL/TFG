@@ -1,11 +1,6 @@
-package com.example.tucita
+package com.example.tucita.pantallas
 
-import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -28,24 +23,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.tucita.ui.theme.TuCitaTheme
+import com.example.tucita.R
 
-class MainActivity : ComponentActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            TuCitaTheme(dynamicColor = true) {
-                Bienvenida()
-            }
-
-        }
-    }
-}
-
-//Funcion para la pantalla de bienvenida e inicio de sesion
 @Composable
 fun Bienvenida (modifier: Modifier = Modifier){
     //Variable mutable para el correo electronico
@@ -95,13 +75,5 @@ fun Bienvenida (modifier: Modifier = Modifier){
                 Text(text = "Registrarse")
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun PreviewAllAplication() {
-    TuCitaTheme {
-        Bienvenida()
     }
 }

@@ -1,6 +1,5 @@
 package com.example.tucita.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -12,7 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 
-private val DarkColorScheme = darkColorScheme(
+val DarkColorScheme = darkColorScheme(
     primary = Color(0xFFA3F5E3),
     onPrimary = Color(0xFF0A5C4A),
     primaryContainer = Color(0xFF0F8A6F),
@@ -48,10 +47,9 @@ private val DarkColorScheme = darkColorScheme(
     inversePrimary = Color(0xFF14B894),
 
     scrim = Color(0xFF000000),
-    // shadow no tiene propiedad directa en ColorScheme
 )
 
-private val LightColorScheme = lightColorScheme(
+val LightColorScheme = lightColorScheme(
     primary = Color(0xFF14B894),
     onPrimary = Color(0xFFFFFFFF),
     primaryContainer = Color(0xFFD1FAF1),
@@ -87,19 +85,17 @@ private val LightColorScheme = lightColorScheme(
     inversePrimary = Color(0xFFA3F5E3),
 
     scrim = Color(0xFF000000),
-    // shadow no tiene propiedad directa en ColorScheme
 )
 
 @Composable
 fun TuCitaTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
+    val context = LocalContext.current
     val colorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
-            val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
