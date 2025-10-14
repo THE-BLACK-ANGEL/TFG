@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.example.tucita.R
 
 @Composable
-fun Bienvenida (modifier: Modifier = Modifier){
+fun Bienvenida( navegarAlInicio : () -> Unit) {
     //Variable mutable para el correo electronico
     var email by remember { mutableStateOf("") }
     //Variable mutable para la contraseña
@@ -35,7 +35,7 @@ fun Bienvenida (modifier: Modifier = Modifier){
     //Variable para la visibilidad de la contraseña
     var passwordVisible by remember { mutableStateOf(false) }
 
-    Box(modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+    Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             //Logo de la app que colocaremos en la pantalla de bienvenida
             Image(
@@ -48,7 +48,7 @@ fun Bienvenida (modifier: Modifier = Modifier){
                 value = email,
                 onValueChange = { email = it },
                 label = { Text("Correo electrónico")},
-                modifier = modifier
+                modifier = Modifier
             )
             //TextField para la contraseña
             OutlinedTextField(
