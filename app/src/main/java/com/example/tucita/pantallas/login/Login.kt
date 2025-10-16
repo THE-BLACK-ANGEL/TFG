@@ -1,4 +1,4 @@
-package com.example.tucita.pantallas
+package com.example.tucita.pantallas.login
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
@@ -27,7 +27,7 @@ import androidx.compose.ui.unit.dp
 import com.example.tucita.R
 
 @Composable
-fun Bienvenida( navegarAlInicio : () -> Unit) {
+fun Login( navegarAlInicio : () -> Unit) {
     //Variable mutable para el correo electronico
     var email by remember { mutableStateOf("") }
     //Variable mutable para la contraseña

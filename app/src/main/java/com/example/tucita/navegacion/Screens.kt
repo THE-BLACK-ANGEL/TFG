@@ -52,25 +52,25 @@ object Notificaciones
 
 //Pantalla de administrador
 @Serializable
-object Administrador
+object General
 //Pantalla de manejo de servicios
 @Serializable
-object ManejoServicios
+object MServicios
 //Pantalla de manejo de citas
 @Serializable
-object ManejoCitas
+object MCitas
 //Pantalla de manejo de usuarios
 @Serializable
-object ManejoUsuarios
+object MUsuarios
 //Pantalla de manejo de profesionales
 @Serializable
-object ManejoProfesionales
+object MProfesionales
 //Pantalla de manejo de roles
 @Serializable
-object ManejoRoles
+object MRoles
 //Pantalla de manejo de notificaciones
 @Serializable
-object ManejoNotificaciones
+object MNotificaciones
 //Pantalla de manejo de configuracion de Aplicacion
 @Serializable
-object ManejoAplicacion
+object MAplicacion
