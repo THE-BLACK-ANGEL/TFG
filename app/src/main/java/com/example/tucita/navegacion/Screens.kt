@@ -52,7 +52,7 @@ object Notificaciones
 
 //Pantalla de administrador
 @Serializable
-object General
+object Panel
 //Pantalla de manejo de servicios
 @Serializable
 object MServicios
