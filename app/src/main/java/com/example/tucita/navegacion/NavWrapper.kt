@@ -13,6 +13,7 @@ fun NavWrapper(){
     //Creamos un NavHost
     NavHost(navController= navController, startDestination = Login){
 
+
         //Pantallas login
         composable<Login>{
             Login{
@@ -25,6 +26,7 @@ fun NavWrapper(){
         composable<Registro> {
 
         }
+
 
         //Pantallas citas
         composable<Inicio> {
@@ -49,6 +51,7 @@ fun NavWrapper(){
 
         }
 
+
         //Pantallas perfil
         composable<Configuracion> {
 
@@ -59,6 +62,7 @@ fun NavWrapper(){
         composable<Perfil> {
 
         }
+
 
         //Pantallas modo administrador
         composable<Panel> {
@@ -85,7 +89,6 @@ fun NavWrapper(){
         composable<MAplicacion> {
 
         }
-
-
+        
     }
 }
